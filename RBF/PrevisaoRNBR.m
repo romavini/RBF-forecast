@@ -3,10 +3,10 @@ function save=PrevisaoRNBR(n1, n2, j1, j2, passos)
 format long
 tic
 
-create_plot = true
-create_xls_file = true
+create_plot = false
+create_xls_file = false
 
-Serie = 'DolarPlus';
+Serie = '..\series\DolarPlus';
 Ext='txt';
 NameSerie = strcat(Serie, '.', Ext);
 % X = xlsread(NameSerie);
@@ -407,10 +407,10 @@ if create_xls_file == true
 
 	disp(namefile);
 	disp(time);
-
-	save.colorquartisEMA = colorquartisEMA;
-	save.colorquartisLucro = colorquartisLucro;
-	save.EMA = P.EMA;
 end
+
+save.colorquartisEMA = colorquartisEMA;
+save.colorquartisLucro = colorquartisLucro;
+save.EMA = P.EMA;
 
 end
